@@ -1,8 +1,22 @@
+import { useState } from "react";
+
+type PokemonProps = string | number;
+
+const INITIAL_POKEMON: PokemonProps = 25;
+
 function App() {
+  const [pokemon, setPokemon] = useState<PokemonProps>(INITIAL_POKEMON);
+  const pokemonData = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    .then((response) => response.json())
+    .then((data) => ({
+      name: data.name,
+    }));
+  // console.log(pokemonData);
+  console.log(pokemonData);
   return (
     <div>
       <header>
-        <h1>pikachu</h1>
+        <h1>{pokemonData}</h1>
         <p>25</p>
       </header>
       <main>
