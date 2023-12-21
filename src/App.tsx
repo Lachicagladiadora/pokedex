@@ -1,26 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-type PokemonProps = string | number;
+type PokemonProps = string;
 
-const INITIAL_POKEMON: PokemonProps = 25;
+const INITIAL_POKEMON: PokemonProps = "kakuna";
 
 function App() {
   const [pokemon, setPokemon] = useState<PokemonProps>(INITIAL_POKEMON);
-  const pokemonData = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-    .then((response) => response.json())
-    .then((data) => ({
-      name: data.name,
-    }));
-  // console.log(pokemonData);
-  console.log(pokemonData);
+
+  const pokemonData = async (pokemonId: PokemonProps) => {
+    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+      .then((response) => response.json())
+      .then((data) => data);
+    console.log(data);
+    return data;
+  };
+
+  useEffect(() => {
+    pokemonData(pokemon);
+  }, [pokemon]);
+
   return (
     <div>
       <header>
-        <h1>{pokemonData}</h1>
-        <p>25</p>
+        <h1>name</h1>
+        <p></p>
       </header>
       <main>
         <button>shiny</button>
+        <section>
+          <label htmlFor="search">Search</label>
+          <input
+            type="text"
+            id="search"
+            value={pokemon}
+            onChange={(e) => setPokemon(() => e.target.value)}
+          />
+        </section>
         <section>
           <img src="" alt="pikachu" />
         </section>
@@ -29,7 +44,7 @@ function App() {
           <ul>
             <li>type</li>
             <li>heigth</li>
-            <li>weigth</li>
+            <li>weigth {pokemonData(pokemon).weigth}</li>
           </ul>
         </section>
         <section>
