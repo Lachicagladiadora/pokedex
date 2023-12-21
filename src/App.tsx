@@ -6,12 +6,14 @@ const INITIAL_POKEMON: PokemonProps = "kakuna";
 
 function App() {
   const [pokemon, setPokemon] = useState<PokemonProps>(INITIAL_POKEMON);
+  const [name, setName] = useState<string>("");
 
   const pokemonData = async (pokemonId: PokemonProps) => {
     const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
       .then((response) => response.json())
       .then((data) => data);
     console.log(data);
+    setName(data.name);
     return data;
   };
 
@@ -22,7 +24,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>name</h1>
+        <h1>{name}</h1>
         <p></p>
       </header>
       <main>
@@ -44,7 +46,7 @@ function App() {
           <ul>
             <li>type</li>
             <li>heigth</li>
-            <li>weigth {pokemonData(pokemon).weigth}</li>
+            <li>weigth {}</li>
           </ul>
         </section>
         <section>
