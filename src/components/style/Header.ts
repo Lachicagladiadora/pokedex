@@ -1,82 +1,61 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
-  /* border: solid 2px red; */
-  width: 293px;
-  height: 70px;
+  width: 233px;
+  height: 90px;
   position: absolute;
   top: 44px;
   left: 0px;
-  /* border-radius: 63px 50px 24% 0px; */
-  background-color: orange;
+  background-color: red;
   box-shadow: 0 10px 0px rgba(101, 13, 13);
 `;
 
 export const HeaderLarge = styled.div`
-  /* border: solid 2px pink; */
-  width: 71px;
+  width: 101px;
   height: 44px;
   position: absolute;
   top: 0px;
   right: 0px;
-  /* border-radius: 50px 0px 0px 0px; */
-  background-color: yellow;
+  background-color: red;
   box-shadow: 0 10px 0px rgba(101, 13, 13);
   z-index: -2;
 `;
 
 export const HeaderWhitoutShadow = styled.div`
-  /* border: solid 2px pink; */
-  width: 293px;
+  width: 233px;
   height: 44px;
   position: absolute;
   top: 0px;
-  /* border-radius: 50px 0px 0px 0px; */
-  background-color: yellowgreen;
-  /* box-shadow: 0 10px 0px rgba(101, 13, 13); */
+  border-radius: 50px 0px 0px 0px;
+  background-color: red;
   z-index: -2;
 `;
 
 export const WhitoutShadow = styled.div`
-  /* border: solid 2px pink; */
-  width: 136px;
+  width: 166px;
   height: 44px;
   position: absolute;
   top: 0px;
-  right: 71px;
-  /* border-radius: 50px 0px 0px 0px; */
-  background-color: violet;
-  /* box-shadow: 0 10px 0px rgba(101, 13, 13); */
-  /* z-index: -2; */
+  right: 101px;
+  background-color: red;
 `;
 
 export const Triangle = styled.div`
-  /* border-right: solid 2px pink; */
-  /* background-color: red; */
-  /* border-radius: 60% 60% 100% 60%; */
-
-  /* width: 50px;
-  height: 168px;
-  background-color: red;
-  border-radius: 309% 28% 83% 1%;
-  transform: rotate(62deg);*/
-
   position: absolute;
-  top: 16px;
-  left: 241px;
+  top: 14px;
+  left: 181px;
   width: 0;
   height: 0;
-  border-left: 45px solid transparent; /* la mitad del ancho del triángulo */
-  border-right: 138px solid transparent; /* la mitad del ancho del triángulo */
-  border-bottom: 76px solid pink;
-  box-shadow: 0 10px 0px rgba(0, 0, 0);
-  /* box-shadow: 10px 10 0px rgba(101, 13, 13); */
-  transform: rotate(-29deg);
-  border-radius: 0px 0px 0px 50px;
+  border-left: 64px solid transparent;
+  border-right: 148px solid transparent;
+  border-bottom: 94px solid red;
+  box-shadow: 0 12px 0px rgba(101, 13, 13);
+  transform: rotate(-33deg);
+  border-radius: 0px 0px 0px 60px;
   z-index: -1;
 `;
 
-export const LightLarge = styled.div`
+export const BigLight = styled.div`
   border: solid 5px #dfdfdf;
   background-image: radial-gradient(#2fffc2 30%, #5eaa9c 82%);
   width: 80px;
@@ -85,4 +64,37 @@ export const LightLarge = styled.div`
   position: absolute;
   top: 20px;
   left: 30px;
+`;
+
+export const LightLargeSmallRed = styled.div`
+  border: solid 2px #dfdfdf;
+  background-image: radial-gradient(#ff2f2f 30%, #f2a4a4 82%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 120px;
+`;
+
+export const LightLargeSmallYellow = styled.div`
+  border: solid 2px #dfdfdf;
+  background-image: radial-gradient(#e8ff2f 30%, #d1c676 82%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+`;
+
+export const LightLargeSmallGreen = styled.div`
+  border: solid 2px #dfdfdf;
+  background-image: radial-gradient(#39ff2f 30%, #5eaa6b 82%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 180px;
 `;

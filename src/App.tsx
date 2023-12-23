@@ -3,10 +3,35 @@ import {
   Header,
   HeaderLarge,
   HeaderWhitoutShadow,
-  LightLarge,
+  BigLight,
+  LightLargeSmallGreen,
+  LightLargeSmallRed,
+  LightLargeSmallYellow,
   Triangle,
   WhitoutShadow,
 } from "./components/style/Header";
+import {
+  BorderDisplay,
+  DisplayBaseMayor,
+  DisplayBorderBottom,
+  DisplayForImage,
+  LighSmallRedTop1,
+  LighSmallRedTop2,
+  LightBigRed,
+  ShadowTop,
+  ShadowTopRight,
+  Speaker1,
+  Speaker2,
+  Speaker3,
+  Speaker4,
+  TriangleDisplayBaseMayor,
+  TriangleDisplayBorder,
+} from "./components/style/FirstDisplay";
+import {
+  ButtonLarge1,
+  ButtonLarge2,
+  Rounded,
+} from "./components/style/ButtonsForBottom";
 
 type PokemonProps = string;
 
@@ -72,7 +97,8 @@ function App() {
           width: "500px",
           background: "red",
           zIndex: "-3",
-          borderRadius: "50px 0px 0px 0px",
+          borderRadius: "50px 0px 0px 50px",
+          boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
         }}
       >
         <HeaderWhitoutShadow />
@@ -80,7 +106,31 @@ function App() {
         <HeaderLarge />
         <WhitoutShadow />
         <Triangle />
-        <LightLarge />
+        <BigLight />
+        <LightLargeSmallRed />
+        <LightLargeSmallYellow />
+        <LightLargeSmallGreen />
+
+        <DisplayBaseMayor />
+        <TriangleDisplayBaseMayor />
+        <ShadowTop />
+        <ShadowTopRight />
+
+        <BorderDisplay />
+        <DisplayForImage />
+        <TriangleDisplayBorder />
+        <DisplayBorderBottom />
+        <Speaker1 />
+        <Speaker2 />
+        <Speaker3 />
+        <Speaker4 />
+        <LighSmallRedTop1 />
+        <LighSmallRedTop2 />
+        <LightBigRed />
+
+        <ButtonLarge1 />
+        <ButtonLarge2 />
+        <Rounded />
       </div>
     </div>
   );
