@@ -1,4 +1,12 @@
 import { useEffect, useState } from "react";
+import {
+  Header,
+  HeaderLarge,
+  HeaderWhitoutShadow,
+  LightLarge,
+  Triangle,
+  WhitoutShadow,
+} from "./components/style/Header";
 
 type PokemonProps = string;
 
@@ -57,6 +65,23 @@ function App() {
         </section>
         <section>location area encounter</section>
       </main>
+      <div
+        style={{
+          position: "relative",
+          height: "800px",
+          width: "500px",
+          background: "red",
+          zIndex: "-3",
+          borderRadius: "50px 0px 0px 0px",
+        }}
+      >
+        <HeaderWhitoutShadow />
+        <Header />
+        <HeaderLarge />
+        <WhitoutShadow />
+        <Triangle />
+        <LightLarge />
+      </div>
     </div>
   );
 }
