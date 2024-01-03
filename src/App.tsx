@@ -30,6 +30,16 @@ import {
 import {
   ButtonLarge1,
   ButtonLarge2,
+  ButtonSmall1,
+  ButtonSmall2,
+  DisplaySmall,
+  DivForPointsAndLines,
+  DivForTwoLines,
+  LineSmall,
+  LineSmall1,
+  LineSmall2,
+  PointLarge,
+  PointSmall,
   Rounded,
 } from "./components/style/ButtonsForBottom";
 
@@ -130,7 +140,19 @@ function App() {
 
         <ButtonLarge1 />
         <ButtonLarge2 />
+        <ButtonSmall1 />
+        <ButtonSmall2 />
+        <DisplaySmall />
+
         <Rounded />
+        <DivForPointsAndLines>
+          <PointLarge />
+          <DivForTwoLines>
+            <LineSmall1 />
+            <PointSmall />
+            <LineSmall2 />
+          </DivForTwoLines>
+        </DivForPointsAndLines>
       </div>
     </div>
   );
