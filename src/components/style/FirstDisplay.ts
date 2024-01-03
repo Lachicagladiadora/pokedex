@@ -58,8 +58,8 @@ export const BorderDisplay = styled.div`
 `;
 
 export const DisplayForImage = styled.div`
-  height: 260px;
-  width: 360px;
+  height: 250px;
+  width: 350px;
   position: absolute;
   top: 240px;
   right: 70px;
@@ -134,32 +134,32 @@ export const Speaker4 = styled.div`
 export const LighSmallRedTop1 = styled.div`
   border: solid 2px #dfdfdf;
   background-image: radial-gradient(#ff2f2f 30%, #f2a4a4 82%);
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
-  top: 210px;
+  top: 205px;
   left: 220px;
 `;
 
 export const LighSmallRedTop2 = styled.div`
   border: solid 2px #dfdfdf;
   background-image: radial-gradient(#ff2f2f 30%, #f2a4a4 82%);
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
-  top: 210px;
+  top: 205px;
   left: 260px;
 `;
 
 export const LightBigRed = styled.div`
   border: solid 2px #dfdfdf;
   background-image: radial-gradient(#ff2f2f 30%, #f2a4a4 82%);
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   position: absolute;
-  top: 518px;
-  left: 90px;
+  top: 505px;
+  left: 105px;
 `;
