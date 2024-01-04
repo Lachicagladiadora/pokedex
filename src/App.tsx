@@ -36,7 +36,6 @@ import {
   DivForPointsAndLines,
   DivForTwoLines,
   HorizontalButton,
-  LineSmall,
   LineSmall1,
   LineSmall2,
   PointLarge,
@@ -45,6 +44,17 @@ import {
   VerticalButton,
 } from "./components/style/ButtonsForBottom";
 import { PokedexContainer } from "./components/style/PokedexContainer";
+import {
+  HeaderLargeSecondDisplay,
+  HeaderSecondDisplay,
+  HeaderWhitoutShadowSecondDisplay,
+  SecondDisplayBase,
+  ShadowTopRightSecondDisplay,
+  ShadowTopSecondDisplay,
+  TriangleDisplayBaseMayorSecondDisplay,
+  TriangleSecondDisplay,
+  WhitoutShadowSecondDisplay,
+} from "./components/style/SecondDisplayBase";
 
 type PokemonProps = string;
 
@@ -181,22 +191,22 @@ function App() {
             boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
           }}
         >
-          {/* <HeaderWhitoutShadow />
-          <Header />
-          <HeaderLarge />
-          <WhitoutShadow />
-          <Triangle />
-          <BigLight />
+          <HeaderWhitoutShadowSecondDisplay />
+          <HeaderSecondDisplay />
+          <HeaderLargeSecondDisplay />
+          <WhitoutShadowSecondDisplay />
+          <TriangleSecondDisplay />
+          {/* <BigLight />
           <LightLargeSmallRed />
           <LightLargeSmallYellow />
-          <LightLargeSmallGreen />
+          <LightLargeSmallGreen /> */}
 
-          <DisplayBaseMayor />
-          <TriangleDisplayBaseMayor />
-          <ShadowTop />
-          <ShadowTopRight />
+          <SecondDisplayBase />
+          <TriangleDisplayBaseMayorSecondDisplay />
+          <ShadowTopSecondDisplay />
+          <ShadowTopRightSecondDisplay />
 
-          <BorderDisplay />
+          {/* <BorderDisplay />
           <DisplayForImage />
           <TriangleDisplayBorder />
           <DisplayBorderBottom />
@@ -206,9 +216,9 @@ function App() {
           <Speaker4 />
           <LighSmallRedTop1 />
           <LighSmallRedTop2 />
-          <LightBigRed />
+          <LightBigRed /> */}
 
-          <Rounded />
+          {/* <Rounded />
           <ButtonLarge1 />
           <ButtonLarge2 />
           <ButtonSmall1 />
