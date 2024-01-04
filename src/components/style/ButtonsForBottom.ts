@@ -53,12 +53,13 @@ export const ButtonSmall2 = styled.div`
 
 export const DisplaySmall = styled.div`
   height: 80px;
-  width: 160px;
+  width: 180px;
   position: absolute;
   bottom: 50px;
   left: 104px;
   background-color: green;
   border-radius: 4px;
+  box-shadow: inset 0px 0px 5px rgba(101, 13, 13);
 `;
 
 export const DivForPointsAndLines = styled.div`
@@ -107,21 +108,23 @@ export const LineSmall2 = styled.div`
 export const HorizontalButton = styled.div`
   width: 120px;
   height: 30px;
-  background: blue;
+  background: #242424;
   border-radius: 3px;
   position: absolute;
   bottom: 100px;
   right: 50px;
+  box-shadow: 0px 0px 5px #242424;
   /* transform: rotate(90deg); */
 `;
 
 export const VerticalButton = styled.div`
   width: 120px;
   height: 30px;
-  background: blue;
+  background: #242424;
   border-radius: 3px;
   position: absolute;
   bottom: 100px;
   right: 50px;
   transform: rotate(90deg);
+  box-shadow: 0px 0px 5px #242424;
 `;
