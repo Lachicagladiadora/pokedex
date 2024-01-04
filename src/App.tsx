@@ -44,6 +44,7 @@ import {
   Rounded,
   VerticalButton,
 } from "./components/style/ButtonsForBottom";
+import { PokedexContainer } from "./components/style/PokedexContainer";
 
 type PokemonProps = string;
 
@@ -102,61 +103,129 @@ function App() {
         </section>
         <section>location area encounter</section>
       </main>
-      <div
-        style={{
-          position: "relative",
-          height: "800px",
-          width: "500px",
-          background: "red",
-          zIndex: "-3",
-          borderRadius: "50px 0px 0px 50px",
-          boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
-        }}
-      >
-        <HeaderWhitoutShadow />
-        <Header />
-        <HeaderLarge />
-        <WhitoutShadow />
-        <Triangle />
-        <BigLight />
-        <LightLargeSmallRed />
-        <LightLargeSmallYellow />
-        <LightLargeSmallGreen />
+      <PokedexContainer>
+        <div
+          style={{
+            position: "relative",
+            height: "800px",
+            width: "500px",
+            background: "red",
+            zIndex: "-3",
+            borderRadius: "50px 0px 0px 50px",
+            boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
+          }}
+        >
+          <HeaderWhitoutShadow />
+          <Header />
+          <HeaderLarge />
+          <WhitoutShadow />
+          <Triangle />
+          <BigLight />
+          <LightLargeSmallRed />
+          <LightLargeSmallYellow />
+          <LightLargeSmallGreen />
 
-        <DisplayBaseMayor />
-        <TriangleDisplayBaseMayor />
-        <ShadowTop />
-        <ShadowTopRight />
+          <DisplayBaseMayor />
+          <TriangleDisplayBaseMayor />
+          <ShadowTop />
+          <ShadowTopRight />
 
-        <BorderDisplay />
-        <DisplayForImage />
-        <TriangleDisplayBorder />
-        <DisplayBorderBottom />
-        <Speaker1 />
-        <Speaker2 />
-        <Speaker3 />
-        <Speaker4 />
-        <LighSmallRedTop1 />
-        <LighSmallRedTop2 />
-        <LightBigRed />
+          <BorderDisplay />
+          <DisplayForImage />
+          <TriangleDisplayBorder />
+          <DisplayBorderBottom />
+          <Speaker1 />
+          <Speaker2 />
+          <Speaker3 />
+          <Speaker4 />
+          <LighSmallRedTop1 />
+          <LighSmallRedTop2 />
+          <LightBigRed />
 
-        <Rounded />
-        <ButtonLarge1 />
-        <ButtonLarge2 />
-        <ButtonSmall1 />
-        <ButtonSmall2 />
-        <DisplaySmall />
-        <HorizontalButton />
-        <VerticalButton />
-        <DivForPointsAndLines>
-          <PointLarge />
-          <DivForTwoLines>
-            <LineSmall1 />
-            <PointSmall />
-            <LineSmall2 />
-          </DivForTwoLines>
-        </DivForPointsAndLines>
-      </div>
+          <Rounded />
+          <ButtonLarge1 />
+          <ButtonLarge2 />
+          <ButtonSmall1 />
+          <ButtonSmall2 />
+          <DisplaySmall />
+          <HorizontalButton />
+          <VerticalButton />
+          <DivForPointsAndLines>
+            <PointLarge />
+            <DivForTwoLines>
+              <LineSmall1 />
+              <PointSmall />
+              <LineSmall2 />
+            </DivForTwoLines>
+          </DivForPointsAndLines>
+        </div>
+        <div
+          style={{
+            position: "relative",
+            height: "800px",
+            width: "50px",
+            background: "red",
+            zIndex: "-3",
+            borderRadius: "0px",
+            boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
+          }}
+        ></div>
+        <div
+          style={{
+            position: "relative",
+            height: "800px",
+            width: "500px",
+            background: "red",
+            zIndex: "-3",
+            borderRadius: "0px 50px 50px 0px",
+            boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
+          }}
+        >
+          {/* <HeaderWhitoutShadow />
+          <Header />
+          <HeaderLarge />
+          <WhitoutShadow />
+          <Triangle />
+          <BigLight />
+          <LightLargeSmallRed />
+          <LightLargeSmallYellow />
+          <LightLargeSmallGreen />
+
+          <DisplayBaseMayor />
+          <TriangleDisplayBaseMayor />
+          <ShadowTop />
+          <ShadowTopRight />
+
+          <BorderDisplay />
+          <DisplayForImage />
+          <TriangleDisplayBorder />
+          <DisplayBorderBottom />
+          <Speaker1 />
+          <Speaker2 />
+          <Speaker3 />
+          <Speaker4 />
+          <LighSmallRedTop1 />
+          <LighSmallRedTop2 />
+          <LightBigRed />
+
+          <Rounded />
+          <ButtonLarge1 />
+          <ButtonLarge2 />
+          <ButtonSmall1 />
+          <ButtonSmall2 />
+          <DisplaySmall />
+          <HorizontalButton />
+          <VerticalButton />
+          <DivForPointsAndLines>
+            <PointLarge />
+            <DivForTwoLines>
+              <LineSmall1 />
+              <PointSmall />
+              <LineSmall2 />
+            </DivForTwoLines>
+          </DivForPointsAndLines> */}
+        </div>
+      </PokedexContainer>
     </div>
   );
 }
