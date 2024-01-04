@@ -35,12 +35,14 @@ import {
   DisplaySmall,
   DivForPointsAndLines,
   DivForTwoLines,
+  HorizontalButton,
   LineSmall,
   LineSmall1,
   LineSmall2,
   PointLarge,
   PointSmall,
   Rounded,
+  VerticalButton,
 } from "./components/style/ButtonsForBottom";
 
 type PokemonProps = string;
@@ -138,13 +140,14 @@ function App() {
         <LighSmallRedTop2 />
         <LightBigRed />
 
+        <Rounded />
         <ButtonLarge1 />
         <ButtonLarge2 />
         <ButtonSmall1 />
         <ButtonSmall2 />
         <DisplaySmall />
-
-        <Rounded />
+        <HorizontalButton />
+        <VerticalButton />
         <DivForPointsAndLines>
           <PointLarge />
           <DivForTwoLines>
