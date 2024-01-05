@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
-  width: 233px;
-  height: 90px;
+  width: 50%;
+  height: 16.7%;
   position: absolute;
-  top: 44px;
+  top: 0%;
   left: 0px;
   background-color: red;
   box-shadow: 0 10px 0px rgba(101, 13, 13);
+  border-radius: 40px 0px 0px 0px;
 `;
 
 export const HeaderLarge = styled.div`
@@ -16,7 +17,7 @@ export const HeaderLarge = styled.div`
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: red;
+  background-color: green;
   box-shadow: 0 10px 0px rgba(101, 13, 13);
   z-index: -2;
 `;

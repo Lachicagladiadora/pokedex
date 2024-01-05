@@ -79,47 +79,13 @@ function App() {
 
   return (
     <div>
-      <header>
-        <h1>{name}</h1>
-        <p></p>
-      </header>
-      <main>
-        <button>shiny</button>
-        <section>
-          <label htmlFor="search">Search</label>
-          <input
-            type="text"
-            id="search"
-            value={pokemon}
-            onChange={(e) => setPokemon(() => e.target.value)}
-          />
-        </section>
-        <section>
-          <img src="" alt="pikachu" />
-        </section>
-        <section>
-          description
-          <ul>
-            <li>type</li>
-            <li>heigth</li>
-            <li>weigth {}</li>
-          </ul>
-        </section>
-        <section>
-          ataques/moves
-          <ul>
-            <li>electrico</li>
-          </ul>
-        </section>
-        <section>location area encounter</section>
-      </main>
       <PokedexContainer>
         <div
           style={{
             position: "relative",
-            height: "800px",
-            width: "500px",
-            background: "red",
+            height: "100%",
+            width: "47.3%",
+            background: "blue",
             zIndex: "-3",
             borderRadius: "50px 0px 0px 50px",
             boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
@@ -172,9 +138,9 @@ function App() {
         <div
           style={{
             position: "relative",
-            height: "800px",
-            width: "50px",
-            background: "red",
+            height: "auto",
+            width: "4.8%",
+            background: "orange",
             zIndex: "-3",
             borderRadius: "0px",
             boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
@@ -183,9 +149,9 @@ function App() {
         <div
           style={{
             position: "relative",
-            height: "800px",
-            width: "500px",
-            background: "red",
+            height: "100%",
+            width: "47.3%",
+            background: "green",
             zIndex: "-3",
             borderRadius: "0px 50px 50px 0px",
             boxShadow: "inset 0px 0px 20px rgba(101, 13, 13)",
@@ -236,6 +202,41 @@ function App() {
           </DivForPointsAndLines> */}
         </div>
       </PokedexContainer>
+      {/* 
+      <header>
+        <h1>{name}</h1>
+        <p></p>
+      </header>
+      <main>
+        <button>shiny</button>
+        <section>
+          <label htmlFor="search">Search</label>
+          <input
+            type="text"
+            id="search"
+            value={pokemon}
+            onChange={(e) => setPokemon(() => e.target.value)}
+          />
+        </section>
+        <section>
+          <img src="" alt="pikachu" />
+        </section>
+        <section>
+          description
+          <ul>
+            <li>type</li>
+            <li>heigth</li>
+            <li>weigth {}</li>
+          </ul>
+        </section>
+        <section>
+          ataques/moves
+          <ul>
+            <li>electrico</li>
+          </ul>
+        </section>
+        <section>location area encounter</section>
+      </main> */}
     </div>
   );
 }
