@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Header,
   HeaderLarge,
@@ -43,7 +43,7 @@ import {
   Rounded,
   VerticalButton,
 } from "./components/style/ButtonsForBottom";
-import { PokedexContainer } from "./components/style/PokedexContainer";
+import { PokedexContainerStyle } from "./components/style/PokedexContainerStyle";
 import {
   HeaderLargeSecondDisplay,
   HeaderSecondDisplay,
@@ -55,6 +55,7 @@ import {
   TriangleSecondDisplay,
   WhitoutShadowSecondDisplay,
 } from "./components/style/SecondDisplayBase";
+import { useElementSize } from "./hooks/useElementSize";
 
 type PokemonProps = string;
 
@@ -63,6 +64,19 @@ const INITIAL_POKEMON: PokemonProps = "kakuna";
 function App() {
   const [pokemon, setPokemon] = useState<PokemonProps>(INITIAL_POKEMON);
   const [name, setName] = useState<string>("");
+
+  // const wrapperRef = useRef<HTMLDivElement | undefined>(undefined);
+  const windownRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const wrapperRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+
+  const {
+    elementWidth: elementWraperWidth,
+    elementHeight: elementWraperHeight,
+  } = useElementSize(wrapperRef.current);
+  const {
+    elementWidth: elementWindownWidth,
+    elementHeight: elementWindownHeight,
+  } = useElementSize(windownRef.current);
 
   const pokemonData = async (pokemonId: PokemonProps) => {
     const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
@@ -77,9 +91,34 @@ function App() {
     pokemonData(pokemon);
   }, [pokemon]);
 
+  // const scaleContainerPokedex = (width: number, height: number): number => {
+  //   if (width > 800 && height > 600) return 1;
+  // };
+
   return (
-    <div>
-      <PokedexContainer>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100%",
+        width: "100%",
+      }}
+      ref={windownRef}
+    >
+      <h2>
+        display: {elementWindownHeight} and {elementWindownWidth}
+        contain: {elementWraperHeight} and {elementWindownWidth}
+      </h2>
+      <PokedexContainerStyle
+        ref={wrapperRef}
+        $scale={Math.min(
+          elementWindownWidth / elementWraperWidth,
+          elementWindownHeight / elementWraperHeight
+        )}
+      >
+        {/* khretgifurfejgkibdf */}
         <div
           style={{
             position: "relative",
@@ -166,12 +205,10 @@ function App() {
           <LightLargeSmallRed />
           <LightLargeSmallYellow />
           <LightLargeSmallGreen /> */}
-
           <SecondDisplayBase />
           <TriangleDisplayBaseMayorSecondDisplay />
           <ShadowTopSecondDisplay />
           <ShadowTopRightSecondDisplay />
-
           {/* <BorderDisplay />
           <DisplayForImage />
           <TriangleDisplayBorder />
@@ -183,8 +220,7 @@ function App() {
           <LighSmallRedTop1 />
           <LighSmallRedTop2 />
           <LightBigRed /> */}
-
-          {/* <Rounded />
+          <Rounded />
           <ButtonLarge1 />
           <ButtonLarge2 />
           <ButtonSmall1 />
@@ -199,9 +235,9 @@ function App() {
               <PointSmall />
               <LineSmall2 />
             </DivForTwoLines>
-          </DivForPointsAndLines> */}
+          </DivForPointsAndLines>
         </div>
-      </PokedexContainer>
+      </PokedexContainerStyle>
       {/* 
       <header>
         <h1>{name}</h1>
