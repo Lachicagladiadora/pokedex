@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const DisplayBaseMayor = styled.div`
   border: solid 2px rgb(101, 13, 13);
   height: 640px;
-  width: 479px;
+  width: 478px;
   position: absolute;
-  bottom: 10px;
+  top: 152px;
   left: 10px;
   border-radius: 0px 0px 0px 40px;
   border-top: transparent;

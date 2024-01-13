@@ -17,7 +17,7 @@ export const HeaderLarge = styled.div`
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: green;
+  background-color: red;
   box-shadow: 0 10px 0px rgba(101, 13, 13);
   z-index: -2;
 `;

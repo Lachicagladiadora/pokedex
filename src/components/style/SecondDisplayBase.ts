@@ -59,10 +59,10 @@ export const TriangleSecondDisplay = styled.div`
 export const SecondDisplayBase = styled.div`
   border: solid 2px rgb(101, 13, 13);
   height: 640px;
-  width: 479px;
+  width: 478px;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  top: 152px;
+  right: 10px;
   border-radius: 0px 0px 40px 0px;
   border-top: transparent;
 `;
