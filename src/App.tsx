@@ -56,6 +56,11 @@ import {
   WhitoutShadowSecondDisplay,
 } from "./components/style/SecondDisplayBase";
 import { useElementSize } from "./hooks/useElementSize";
+import {
+  ContainerFirstDisplay,
+  ContainerSecondDisplay,
+  HingeStyle,
+} from "./components/style/PartsContainer";
 
 type PokemonProps = string;
 
@@ -97,10 +102,6 @@ function App() {
 
   return (
     <>
-      <h2 style={{ textAlign: "center" }}>
-        display: {elementWindownHeight} and {elementWindownWidth}
-        contain: {elementWraperHeight} and {elementWindownWidth}
-      </h2>
       <div
         ref={windownRef}
         style={{
@@ -112,6 +113,11 @@ function App() {
           width: "100%",
         }}
       >
+        <h2 style={{ textAlign: "center" }}>
+          display: {elementWindownHeight} and {elementWindownWidth}
+          contain: {elementWraperHeight} and {elementWindownWidth}
+        </h2>
+
         <PokedexContainerStyle
           ref={wrapperRef}
           $scale={Math.min(
@@ -119,7 +125,13 @@ function App() {
             elementWindownHeight / elementWraperHeight
           )}
         >
-          hello
+          {/* difgjoierjgo;sdji */}
+          <ContainerFirstDisplay>
+            <Header />
+            <HeaderLarge />
+          </ContainerFirstDisplay>
+          <HingeStyle />
+          <ContainerSecondDisplay />
         </PokedexContainerStyle>
       </div>
     </>

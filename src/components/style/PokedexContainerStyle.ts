@@ -7,6 +7,8 @@ export const PokedexContainerStyle = styled.div<{ $scale?: number }>`
   height: 100%;
   border: solid 4px green;
   display: flex;
+  align-items: center;
+  justify-content: center;
   /* margin: 40px auto; */
   transform: scale(${(props) => props.$scale});
   position: relative;

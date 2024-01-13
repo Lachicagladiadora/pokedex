@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const SecondDisplayBase = styled.div`
+  border: solid 2px rgb(101, 13, 13);
+  height: 640px;
+  width: 478px;
+  position: absolute;
+  top: 152px;
+  right: 10px;
+  border-radius: 0px 0px 40px 0px;
+  border-top: transparent;
+`;
+
 export const HeaderSecondDisplay = styled.div`
   width: 233px;
   height: 90px;
@@ -54,17 +65,6 @@ export const TriangleSecondDisplay = styled.div`
   transform: rotate(33deg);
   border-radius: 0px 0px 60px 0px;
   z-index: -1;
-`;
-
-export const SecondDisplayBase = styled.div`
-  border: solid 2px rgb(101, 13, 13);
-  height: 640px;
-  width: 478px;
-  position: absolute;
-  top: 152px;
-  right: 10px;
-  border-radius: 0px 0px 40px 0px;
-  border-top: transparent;
 `;
 
 export const TriangleDisplayBaseMayorSecondDisplay = styled.div`
