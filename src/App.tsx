@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import {
-  Header,
-  HeaderLarge,
+  HFDLeftCorner,
+  HFDRightCorner,
   HeaderWhitoutShadow,
   BigLight,
   LightLargeSmallGreen,
@@ -9,6 +9,7 @@ import {
   LightLargeSmallYellow,
   Triangle,
   WhitoutShadow,
+  TriangleShadow,
 } from "./components/style/Header";
 import {
   BorderDisplay,
@@ -127,8 +128,11 @@ function App() {
         >
           {/* difgjoierjgo;sdji */}
           <ContainerFirstDisplay>
-            <Header />
-            <HeaderLarge />
+            <HFDRightCorner />
+            <HFDLeftCorner />
+            <Triangle />
+            <TriangleShadow />
+            {/* <HeaderWhitoutShadow /> */}
           </ContainerFirstDisplay>
           <HingeStyle />
           <ContainerSecondDisplay />
