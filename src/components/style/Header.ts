@@ -47,33 +47,44 @@ export const HFDRightCorner = styled.div`
 //   background-color: red;
 // `;
 
-export const Triangle = styled.div`
+export const HFDTriangle = styled.div<{
+  $left: number;
+  $right: number;
+  $bottom: number;
+}>`
   position: absolute;
   top: 1%;
   left: 40%;
-  width: 12%;
+  width: 0%;
   height: 0%;
-  border-left: 65px solid transparent;
+  /* border-left: 65px solid transparent;
   border-right: 133px solid transparent;
-  border-bottom: 99px solid red;
+  border-bottom: 99px solid red; */
+  border-left: ${(props) => props.$left}px solid transparent;
+  border-right: ${(props) => props.$right}px solid transparent;
+  border-bottom: ${(props) => props.$bottom}px solid red;
   /* box-shadow: 0 12px 0px rgba(101, 13, 13); */
   transform: rotate(-37deg);
-  border-radius: 0px 0px 0px 28%;
+  border-radius: 0% 0% 0% 28%;
   /* z-index: -1; */
 `;
 
-export const TriangleShadow = styled.div`
+export const HFDTriangleShadow = styled.div<{
+  $leftShadow: number;
+  $rightShadow: number;
+  $bottomShadow: number;
+}>`
   position: absolute;
-  top: 3.1%;
-  left: 42%;
-  width: 12%;
+  top: 3.7%;
+  left: 40.6%;
+  width: 0%;
   height: 0%;
-  border-left: 60px solid transparent;
-  border-right: 128px solid transparent;
-  border-bottom: 80px solid transparent;
-  box-shadow: 0px 12px 0px rgba(101, 13, 13);
+  border-left: ${(props) => props.$leftShadow} solid transparent;
+  border-right: ${(props) => props.$rightShadow} solid transparent;
+  border-bottom: ${(props) => props.$bottomShadow} solid rgba(101, 13, 13);
+  /* box-shadow: 0px 12px 0px rgba(101, 13, 13); */
   transform: rotate(-37deg);
-  border-radius: 0px 0px 0px 28%;
+  border-radius: 0px 0px 0px 36%;
   /* z-index: -1; */
 `;
 

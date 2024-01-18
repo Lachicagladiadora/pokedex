@@ -1,67 +1,18 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  HFDLeftCorner,
-  HFDRightCorner,
-  HeaderWhitoutShadow,
-  BigLight,
-  LightLargeSmallGreen,
-  LightLargeSmallRed,
-  LightLargeSmallYellow,
-  Triangle,
-  WhitoutShadow,
-  TriangleShadow,
-} from "./components/style/Header";
-import {
-  BorderDisplay,
-  DisplayBaseMayor,
-  DisplayBorderBottom,
-  DisplayForImage,
-  LighSmallRedTop1,
-  LighSmallRedTop2,
-  LightBigRed,
-  ShadowTop,
-  ShadowTopRight,
-  Speaker1,
-  Speaker2,
-  Speaker3,
-  Speaker4,
-  TriangleDisplayBaseMayor,
-  TriangleDisplayBorder,
-} from "./components/style/FirstDisplay";
-import {
-  ButtonLarge1,
-  ButtonLarge2,
-  ButtonSmall1,
-  ButtonSmall2,
-  DisplaySmall,
-  DivForPointsAndLines,
-  DivForTwoLines,
-  HorizontalButton,
-  LineSmall1,
-  LineSmall2,
-  PointLarge,
-  PointSmall,
-  Rounded,
-  VerticalButton,
-} from "./components/style/ButtonsForBottom";
-import { PokedexContainerStyle } from "./components/style/PokedexContainerStyle";
-import {
-  HeaderLargeSecondDisplay,
-  HeaderSecondDisplay,
-  HeaderWhitoutShadowSecondDisplay,
-  SecondDisplayBase,
-  ShadowTopRightSecondDisplay,
-  ShadowTopSecondDisplay,
-  TriangleDisplayBaseMayorSecondDisplay,
-  TriangleSecondDisplay,
-  WhitoutShadowSecondDisplay,
-} from "./components/style/SecondDisplayBase";
 import { useElementSize } from "./hooks/useElementSize";
 import {
   ContainerFirstDisplay,
   ContainerSecondDisplay,
   HingeStyle,
 } from "./components/style/PartsContainer";
+
+import {
+  HFDLeftCorner,
+  HFDRightCorner,
+  HFDTriangle,
+  HFDTriangleShadow,
+} from "./components/style/Header";
+import { PokedexContainerStyle } from "./components/style/PokedexContainerStyle";
 
 type PokemonProps = string;
 
@@ -115,7 +66,7 @@ function App() {
         }}
       >
         <h2 style={{ textAlign: "center" }}>
-          display: {elementWindownHeight} and {elementWindownWidth}
+          display: height {elementWindownHeight} and {elementWindownWidth}
           contain: {elementWraperHeight} and {elementWindownWidth}
         </h2>
 
@@ -130,8 +81,16 @@ function App() {
           <ContainerFirstDisplay>
             <HFDRightCorner />
             <HFDLeftCorner />
-            <Triangle />
-            <TriangleShadow />
+            <HFDTriangleShadow
+              $leftShadow={getHFDTriagleBorder(elementWindownWidth, 78)}
+              $rightShadow={getHFDTriagleBorder(elementWindownWidth, 133)}
+              $bottomShadow={getHFDTriagleBorder(elementWindownWidth, 84)}
+            />
+            <HFDTriangle
+              $left={getHFDTriagleBorder(elementWindownWidth, 65)}
+              $right={getHFDTriagleBorder(elementWindownWidth, 133)}
+              $bottom={getHFDTriagleBorder(elementWindownWidth, 99)}
+            />
             {/* <HeaderWhitoutShadow /> */}
           </ContainerFirstDisplay>
           <HingeStyle />
@@ -143,6 +102,23 @@ function App() {
 }
 
 export default App;
+
+const getHFDTriagleBorder = (widthWrapper: number, equi: number): number => {
+  const HFDTLeft = Math.round((widthWrapper / equi) * 1214);
+  return HFDTLeft;
+};
+
+// const getHFDTLeft=(width:number):number=>{
+//   const HFDTLeft = Math.round((width/65)*1214)
+//   return HFDTLeft
+// }
+
+// const getHFDTRight =
+
+// const getHFDTBottom
+// const getHFDTLeftShadow
+// const getHFDTRightShadow
+// const getHFDTBottomShadow
 
 // {/* <PokedexContainerStyle
 // ref={wrapperRef}
